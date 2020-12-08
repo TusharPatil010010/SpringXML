@@ -5,6 +5,13 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
            
-           <bean id="engine" class="com.capg.springxml.Car"></bean>
+           <!-- loose coupling by bean example
+           <bean id="engine" class="com.capg.springxml.Car"></bean> -->
+           
+           
+           <!-- DI using setter method -->
+           <bean id="bike" class="com.capg.springxml.Bike">
+           		<property name="color" value="Red"></property>
+           </bean>
            
 </beans>           

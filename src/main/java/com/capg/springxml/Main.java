@@ -15,7 +15,13 @@ public class Main{
 		
 		ApplicationContext ac = new ClassPathXmlApplicationContext("beans.xml");
 		
-		Engine key = (Engine) ac.getBean("engine");
-		new Keys().run(key);
+		/*
+		 * Example of loose coupling using bean Engine key = (Engine)
+		 * ac.getBean("engine"); new Keys().run(key);
+		 */
+		
+		//DI using setter method
+		Bike bike = ac.getBean("bike", Bike.class);
+		bike.showColor();
 	}
 }
