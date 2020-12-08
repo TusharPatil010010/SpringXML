@@ -1,6 +1,11 @@
 package com.capg.springxml;
 
-public interface Engine {
+public class Engine {
 
-	public void start();
+	public Engine() {
+		System.out.println("Engine constructor");
+	}
+	public void start() {
+		System.out.println("Engine is started..");
+	}
 }

@@ -1,13 +1,13 @@
 package com.capg.springxml;
 
-public class Bike implements Engine {
-
-	@Override
-	public void start() {
-		System.out.println("Bike has been started");		
-	}
+public class Bike {
 	
 	String color;
+	Engine engine;
+	
+	public Bike(Engine engine) {
+		this.engine = engine;
+	}
 	
 	public void setColor(String color) {
 		this.color = color;
@@ -15,6 +15,10 @@ public class Bike implements Engine {
 	
 	public void showColor() {
 		System.out.println("Bike color is : " + color);
+	}
+	
+	public void start() {
+		 System.out.println("Bike has been started");
 	}
 
 }

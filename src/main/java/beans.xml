@@ -5,18 +5,17 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
            
-           <!-- loose coupling by bean example
-           <bean id="engine" class="com.capg.springxml.Car"></bean> -->
+
+           <bean id="engineobj" class="com.capg.springxml.Engine"></bean> 
            
+            <bean id="bike" class="com.capg.springxml.Bike">
+           		<constructor-arg name="engine" ref="engineobj"></constructor-arg>
+           </bean> 
            
-           <!-- DI using setter method -->
-           <!-- <bean id="bike" class="com.capg.springxml.Bike">
-           		<property name="color" value="Red"></property>
-           </bean> -->
-           
-           <!-- DI using constructor -->
+
            <bean id="car" class="com.capg.springxml.Car">
-           		<constructor-arg name="color" value="red"></constructor-arg>
-           </bean>
+           		<constructor-arg name="engine" ref="engineobj"></constructor-arg>
+           </bean> 
+           
            
 </beans>           
