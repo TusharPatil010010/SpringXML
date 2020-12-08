@@ -10,8 +10,13 @@
            
            
            <!-- DI using setter method -->
-           <bean id="bike" class="com.capg.springxml.Bike">
+           <!-- <bean id="bike" class="com.capg.springxml.Bike">
            		<property name="color" value="Red"></property>
+           </bean> -->
+           
+           <!-- DI using constructor -->
+           <bean id="car" class="com.capg.springxml.Car">
+           		<constructor-arg name="color" value="red"></constructor-arg>
            </bean>
            
 </beans>           

@@ -20,8 +20,14 @@ public class Main{
 		 * ac.getBean("engine"); new Keys().run(key);
 		 */
 		
-		//DI using setter method
-		Bike bike = ac.getBean("bike", Bike.class);
-		bike.showColor();
+		/*
+		 * DI using setter method 
+		 * Bike bike = ac.getBean("bike", Bike.class);
+		 * bike.showColor();
+		 */
+		
+		//DI using constructor
+		Car car = ac.getBean("car", Car.class);
+		car.showColor();
 	}
 }
