@@ -1,5 +1,8 @@
 package com.capg.springxml;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 class Keys{
 	
 	public void run(Engine key) {
@@ -9,7 +12,10 @@ class Keys{
 
 public class Main{
 	public static void main(String[] args) {
-		Engine key = new Car();
+		
+		ApplicationContext ac = new ClassPathXmlApplicationContext("beans.xml");
+		
+		Engine key = (Engine) ac.getBean("engine");
 		new Keys().run(key);
 	}
 }
